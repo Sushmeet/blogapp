@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>index</title>
+    </head>
+    <body>
+    <div class="container">
+    <h1>Index</h1>
+    <%blogs.forEach( (blog) => {%>
+    <h4> <%=blog.title%></h4>
+    <img src='<%=blog.image%>'alt='some image'>
+    <p><%=blog.body%></p>
+    <%=blog.createdAt%>
+    <% }); %>
+    </div>
+    </body>
+</html>
