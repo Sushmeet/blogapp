@@ -1,8 +1,5 @@
-<html>
-    <head>
-        <title>index</title>
-    </head>
-    <body>
+<% include ./partials/header %>
+<h1> Index Page</h1>
     <div class="container">
     <h1>Index</h1>
     <%blogs.forEach( (blog) => {%>
@@ -12,5 +9,4 @@
     <%=blog.createdAt%>
     <% }); %>
     </div>
-    </body>
-</html>
+<% include ./partials/footer %>

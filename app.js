@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 mongoose.connect("mongodb://localhost/restful_blog_app", {
-    useMongoClient: true
+  useMongoClient: true
 });
 
 // blog app will contain
@@ -46,14 +46,14 @@ app.get('', (req, res) => {
   res.redirect('/blogs');
 });
 
-app.get('/blogs',(req, res) => {
+app.get('/blogs', (req, res) => {
   blog.find({}, (err, blogs) => {
-      if(err) {
-        console.log(err);
-      }
-      else {
-        res.render('index',{blogs: blogs});
-      }
+    if (err) {
+      console.log(err);
+    }
+    else {
+      res.render('index', { blogs: blogs });
+    }
   })
 });
 
